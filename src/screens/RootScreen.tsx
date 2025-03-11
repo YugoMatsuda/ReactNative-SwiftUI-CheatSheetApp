@@ -4,7 +4,7 @@ import React from "react";
 const RootScreen = () => {
   return (
     <View>
-      <Text>RootScreen</Text>
+      <Text className="text-red-500">RootScreedn</Text>
     </View>
   );
 };
