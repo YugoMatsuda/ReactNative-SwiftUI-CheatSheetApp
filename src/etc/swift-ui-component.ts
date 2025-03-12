@@ -1,10 +1,12 @@
 import { ScreenComponentType } from "../etc/screen-component-type";
 import TextScreen from "../screens/TextScreen";
 import ButtonScreen from "../screens/ButtonScreen";
+import ImageScreen from "../screens/ImageScreen";
 
 export enum SwiftUIComponent {
   Text = "text",
   Button = "button",
+  Image = "image",
 }
 
 const SwiftUIComponentMap = {
@@ -17,6 +19,11 @@ const SwiftUIComponentMap = {
     component: ButtonScreen as ScreenComponentType<"Button Screen">,
     routeName: "Button Screen" as const,
     title: "Button",
+  },
+  [SwiftUIComponent.Image]: {
+    component: ImageScreen as ScreenComponentType<"Image Screen">,
+    routeName: "Image Screen" as const,
+    title: "Image",
   },
 };
 
