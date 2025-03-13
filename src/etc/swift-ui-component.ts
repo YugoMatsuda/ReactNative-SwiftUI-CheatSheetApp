@@ -4,6 +4,7 @@ import ButtonScreen from "../screens/ButtonScreen";
 import ImageScreen from "../screens/ImageScreen";
 import VStackScreen from "../screens/VStackScreen";
 import HStackScreen from "../screens/HStackScreen";
+import ZStackScreen from "../screens/ZStackScreen";
 
 export enum SwiftUIComponent {
   Text = "text",
@@ -11,6 +12,7 @@ export enum SwiftUIComponent {
   Image = "image",
   VStack = "vstack",
   HStack = "hstack",
+  ZStack = "zstack",
 }
 
 const SwiftUIComponentMap = {
@@ -38,6 +40,11 @@ const SwiftUIComponentMap = {
     component: HStackScreen as ScreenComponentType<"HStack Screen">,
     routeName: "HStack Screen" as const,
     title: "HStack",
+  },
+  [SwiftUIComponent.ZStack]: {
+    component: ZStackScreen as ScreenComponentType<"ZStack Screen">,
+    routeName: "ZStack Screen" as const,
+    title: "ZStack",
   },
 };
 
