@@ -10,6 +10,7 @@ export type ParamList = {
   "ZStack Screen": undefined;
   "Grid Screen": undefined;
   "List Screen": undefined;
+  "TextFieldScreen": undefined;
 };
 
 export type ScreenComponentProps<RouteName extends keyof ParamList> = {
