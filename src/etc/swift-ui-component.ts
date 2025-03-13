@@ -5,7 +5,8 @@ import ImageScreen from "../screens/ImageScreen";
 import VStackScreen from "../screens/VStackScreen";
 import HStackScreen from "../screens/HStackScreen";
 import ZStackScreen from "../screens/ZStackScreen";
-import GridScreen  from "../screens/GridScreen";
+import GridScreen from "../screens/GridScreen";
+import ListScreen from "../screens/ListScreen";
 
 export enum SwiftUIComponent {
   Text = "text",
@@ -15,6 +16,7 @@ export enum SwiftUIComponent {
   HStack = "hstack",
   ZStack = "zstack",
   Grid = "Grid",
+  List = "List",
 }
 
 const SwiftUIComponentMap = {
@@ -52,6 +54,11 @@ const SwiftUIComponentMap = {
     component: GridScreen as ScreenComponentType<"Grid Screen">,
     routeName: "Grid Screen" as const,
     title: "Grid",
+  },
+  [SwiftUIComponent.List]: {
+    component: ListScreen as ScreenComponentType<"List Screen">,
+    routeName: "List Screen" as const,
+    title: "List",
   },
 };
 

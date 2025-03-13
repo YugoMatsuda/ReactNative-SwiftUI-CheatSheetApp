@@ -9,6 +9,7 @@ export type ParamList = {
   "HStack Screen": undefined;
   "ZStack Screen": undefined;
   "Grid Screen": undefined;
+  "List Screen": undefined;
 };
 
 export type ScreenComponentProps<RouteName extends keyof ParamList> = {

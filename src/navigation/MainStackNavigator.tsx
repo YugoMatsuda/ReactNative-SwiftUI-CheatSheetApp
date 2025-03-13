@@ -1,8 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import RootScreen from "../screens/RootScreen";
-import {
-  SwiftUIComponentUtils,
-} from "../etc/swift-ui-component";
+import { SwiftUIComponentUtils } from "../etc/swift-ui-component";
 
 const Stack = createStackNavigator();
 
@@ -19,6 +17,7 @@ function MainStackNavigator() {
               item
             ) as React.ComponentType<any>
           }
+          options={{ title: SwiftUIComponentUtils.title(item) }}
         />
       ))}
     </Stack.Navigator>
