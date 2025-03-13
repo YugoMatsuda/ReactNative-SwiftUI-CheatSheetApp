@@ -2,11 +2,13 @@ import { ScreenComponentType } from "../etc/screen-component-type";
 import TextScreen from "../screens/TextScreen";
 import ButtonScreen from "../screens/ButtonScreen";
 import ImageScreen from "../screens/ImageScreen";
+import VStackScreen from "../screens/VStackScreen";
 
 export enum SwiftUIComponent {
   Text = "text",
   Button = "button",
   Image = "image",
+  VStack = "vstack",
 }
 
 const SwiftUIComponentMap = {
@@ -24,6 +26,11 @@ const SwiftUIComponentMap = {
     component: ImageScreen as ScreenComponentType<"Image Screen">,
     routeName: "Image Screen" as const,
     title: "Image",
+  },
+  [SwiftUIComponent.VStack]: {
+    component: VStackScreen as ScreenComponentType<"VStack Screen">,
+    routeName: "VStack Screen" as const,
+    title: "VStack",
   },
 };
 

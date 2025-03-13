@@ -5,6 +5,7 @@ export type ParamList = {
   "Text Screen": undefined;
   "Button Screen": undefined;
   "Image Screen": undefined;
+  "VStack Screen": undefined;
 };
 
 export type ScreenComponentProps<RouteName extends keyof ParamList> = {
