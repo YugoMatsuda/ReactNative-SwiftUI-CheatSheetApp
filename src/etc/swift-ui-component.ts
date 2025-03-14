@@ -8,6 +8,7 @@ import ZStackScreen from "../screens/ZStackScreen";
 import GridScreen from "../screens/GridScreen";
 import ListScreen from "../screens/ListScreen";
 import TextFieldScreen from "../screens/TextFieldScreen";
+import ToggleScreen from "../screens/ToggleScreen";
 
 export enum SwiftUIComponent {
   Text = "text",
@@ -19,6 +20,7 @@ export enum SwiftUIComponent {
   Grid = "Grid",
   List = "List",
   TextField = "TextField",
+  Toggle = "Toggle",
 }
 
 const SwiftUIComponentMap = {
@@ -66,6 +68,11 @@ const SwiftUIComponentMap = {
     component: TextFieldScreen as ScreenComponentType<"TextFieldScreen">,
     routeName: "TextFieldScreen" as const,
     title: "TextField",
+  },
+  [SwiftUIComponent.Toggle]: {
+    component: ToggleScreen as ScreenComponentType<"ToggleScreen">,
+    routeName: "ToggleScreen" as const,
+    title: "Toggle",
   },
 };
 
