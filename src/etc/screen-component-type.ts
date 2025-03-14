@@ -12,6 +12,7 @@ export type ParamList = {
   "List Screen": undefined;
   "TextFieldScreen": undefined;
   "ToggleScreen": undefined;
+  "ScrollViewScreen": undefined;
 };
 
 export type ScreenComponentProps<RouteName extends keyof ParamList> = {
