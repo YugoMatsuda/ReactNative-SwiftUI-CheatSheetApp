@@ -11,6 +11,7 @@ import TextFieldScreen from "../screens/TextFieldScreen";
 import ToggleScreen from "../screens/ToggleScreen";
 import ScrollViewScreen from "../screens/ScrollViewScreen";
 import AlertScreen from "../screens/AlertScreen";
+import PickerScreen from "../screens/PickerScreen";
 
 export enum SwiftUIComponent {
   Text = "text",
@@ -24,7 +25,8 @@ export enum SwiftUIComponent {
   TextField = "TextField",
   Toggle = "Toggle",
   ScrollView = "ScrollView",
-  Alert = "Alert"
+  Alert = "Alert",
+  Picker = "Picker",
 }
 
 const SwiftUIComponentMap = {
@@ -87,6 +89,11 @@ const SwiftUIComponentMap = {
     component: AlertScreen as ScreenComponentType<"AlertScreen">,
     routeName: "AlertScreen" as const,
     title: "Alert",
+  },
+  [SwiftUIComponent.Picker]: {
+    component: PickerScreen as ScreenComponentType<"PickerScreen">,
+    routeName: "PickerScreen" as const,
+    title: "Picker",
   },
 };
 

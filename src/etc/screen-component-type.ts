@@ -14,6 +14,7 @@ export type ParamList = {
   "ToggleScreen": undefined;
   "ScrollViewScreen": undefined;
   "AlertScreen": undefined;
+  "PickerScreen": undefined;
 };
 
 export type ScreenComponentProps<RouteName extends keyof ParamList> = {
