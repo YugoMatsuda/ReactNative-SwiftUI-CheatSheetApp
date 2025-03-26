@@ -10,7 +10,7 @@ const NavigationStackScreen = () => {
   return (
     <View className="flex-1 justify-center items-center gap-y-1">
       <Button
-        title="Push Screen A222"
+        title="Push Screen A"
         onPress={() => navigation.navigate("ScreenA")}
       />
       <TextInput
@@ -118,6 +118,7 @@ function NavigationStackNavigator() {
         component={NavigationStackScreen}
         options={{
           title: "NavigationStack",
+          headerLeft: () => null,
         }}
       />
       <Stack.Screen

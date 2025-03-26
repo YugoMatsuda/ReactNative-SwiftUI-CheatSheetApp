@@ -1,8 +1,11 @@
 import { ScreenComponentType } from "../etc/screen-component-type";
 import NavigationStackNavigator from "../screens/NavigationStackScreen";
-
+import SheetStackNavigator from "../screens/SheetScreen";
+import SheetScreen from "../screens/SheetScreen";
+import { ComponentType } from "react";
 enum SwiftUINavigation {
-  NavigationStack = "navigationstack"
+  NavigationStack = "navigationstack",
+  Sheet = "sheet",
 }
 export { SwiftUINavigation };
 
@@ -12,6 +15,13 @@ const SwiftUINavigationMap = {
     routeName: "NavigationStackScreen" as const,
     title: "NavigationStack",
     presentationStyle: "modal" as const,
+    headerShown: false,
+  },
+  [SwiftUINavigation.Sheet]: {
+    component: SheetStackNavigator as ScreenComponentType<"SheetScreen">,
+    routeName: "SheetScreen" as const,
+    title: "Sheet",
+    presentationStyle: "card" as const,
     headerShown: false,
   },
 };
